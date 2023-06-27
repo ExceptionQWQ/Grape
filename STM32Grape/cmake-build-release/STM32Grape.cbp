@@ -102,13 +102,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/.DS_Store">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/FreeRTOSConfig.h">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/RobotMain.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/gpio.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/main.h">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/pid.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/stm32f4xx_hal_conf.h">
@@ -123,6 +132,9 @@
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/usart.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/RobotMain.cpp">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/freertos.c">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
@@ -130,6 +142,9 @@
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.c">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/pid.cpp">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_hal_msp.c">

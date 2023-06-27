@@ -142,6 +142,33 @@ STM32Grape.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/build
 .PHONY : STM32Grape.elf/fast
 
+Core/Src/RobotMain.obj: Core/Src/RobotMain.cpp.obj
+
+.PHONY : Core/Src/RobotMain.obj
+
+# target to build an object file
+Core/Src/RobotMain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj
+.PHONY : Core/Src/RobotMain.cpp.obj
+
+Core/Src/RobotMain.i: Core/Src/RobotMain.cpp.i
+
+.PHONY : Core/Src/RobotMain.i
+
+# target to preprocess a source file
+Core/Src/RobotMain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.i
+.PHONY : Core/Src/RobotMain.cpp.i
+
+Core/Src/RobotMain.s: Core/Src/RobotMain.cpp.s
+
+.PHONY : Core/Src/RobotMain.s
+
+# target to generate assembly for a file
+Core/Src/RobotMain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.s
+.PHONY : Core/Src/RobotMain.cpp.s
+
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
 
 .PHONY : Core/Src/freertos.obj
@@ -222,6 +249,33 @@ Core/Src/main.s: Core/Src/main.c.s
 Core/Src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
+
+Core/Src/pid.obj: Core/Src/pid.cpp.obj
+
+.PHONY : Core/Src/pid.obj
+
+# target to build an object file
+Core/Src/pid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.obj
+.PHONY : Core/Src/pid.cpp.obj
+
+Core/Src/pid.i: Core/Src/pid.cpp.i
+
+.PHONY : Core/Src/pid.i
+
+# target to preprocess a source file
+Core/Src/pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.i
+.PHONY : Core/Src/pid.cpp.i
+
+Core/Src/pid.s: Core/Src/pid.cpp.s
+
+.PHONY : Core/Src/pid.s
+
+# target to generate assembly for a file
+Core/Src/pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.s
+.PHONY : Core/Src/pid.cpp.s
 
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 
@@ -1159,6 +1213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... STM32Grape.elf"
+	@echo "... Core/Src/RobotMain.obj"
+	@echo "... Core/Src/RobotMain.i"
+	@echo "... Core/Src/RobotMain.s"
 	@echo "... Core/Src/freertos.obj"
 	@echo "... Core/Src/freertos.i"
 	@echo "... Core/Src/freertos.s"
@@ -1168,6 +1225,9 @@ help:
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"
+	@echo "... Core/Src/pid.obj"
+	@echo "... Core/Src/pid.i"
+	@echo "... Core/Src/pid.s"
 	@echo "... Core/Src/stm32f4xx_hal_msp.obj"
 	@echo "... Core/Src/stm32f4xx_hal_msp.i"
 	@echo "... Core/Src/stm32f4xx_hal_msp.s"

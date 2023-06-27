@@ -26,8 +26,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "string.h"
-#include "stdio.h"
+
+
 
 /* USER CODE END Includes */
 
@@ -60,6 +60,8 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+
 
 /* USER CODE END 0 */
 
@@ -97,8 +99,12 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM8_Init();
   MX_TIM1_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
 
+    RobotInit();
+
+    HAL_TIM_Base_Start_IT(&htim7);
 
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
@@ -111,19 +117,12 @@ int main(void)
     HAL_TIM_Encoder_Start(&htim8, TIM_CHANNEL_1 | TIM_CHANNEL_2);
 
 
-    HAL_GPIO_WritePin(MOTOR_EN_GPIO_Port, MOTOR_EN_Pin, GPIO_PIN_SET);
-    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 100);
-    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 100);
-    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 100);
-    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 100);
+    HAL_GPIO_WritePin(MOTOR_EN_GPIO_Port, MOTOR_EN_Pin, GPIO_PIN_RESET);
 
 
 
     while (1) {
-        char message[64] = {0};
-        short speed = (short) __HAL_TIM_GET_COUNTER(&htim2);
-        snprintf(message, 64, "speed:%d\r\n", speed);
-        HAL_UART_Transmit(&huart1, message, strlen(message), 100);
+        RobotTest();
 
         HAL_Delay(100);
     }
@@ -215,6 +214,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
   /* USER CODE BEGIN Callback 1 */
 
+  if (htim->Instance == TIM7) { //采集编码器，执行pid算法
+    RobotTick();
+
+  }
   /* USER CODE END Callback 1 */
 }
 
