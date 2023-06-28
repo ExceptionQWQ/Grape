@@ -62,6 +62,18 @@ void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN 0 */
 
 
+void HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef* huart)
+{
+
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart)
+{
+    if (huart->Instance == USART1) {
+        Robot_RxCpltCallback();
+    }
+}
+
 
 /* USER CODE END 0 */
 
@@ -116,16 +128,7 @@ int main(void)
     HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_1 | TIM_CHANNEL_2);
     HAL_TIM_Encoder_Start(&htim8, TIM_CHANNEL_1 | TIM_CHANNEL_2);
 
-    HAL_GPIO_WritePin(MOTOR_EN_GPIO_Port, MOTOR_EN_Pin, GPIO_PIN_SET);
-
-
-    RobotTest();
-
-    while (1) {
-
-
-        HAL_Delay(100);
-    }
+    HAL_GPIO_WritePin(MOTOR_EN_GPIO_Port, MOTOR_EN_Pin, GPIO_PIN_SET); //电机驱动使能
 
 
   /* USER CODE END 2 */

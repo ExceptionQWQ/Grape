@@ -125,3 +125,30 @@ void RobotTest()
     mecanumMotion.Move(30, 36000, 14000);
     mecanumMotion.Move(30, -36000, -14000);
 }
+
+void RobotMoveX(double speed)
+{
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddXSpeed(speed);
+    mecanumMotion.CommitSpeed();
+}
+
+void RobotMoveY(double speed)
+{
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddYSpeed(speed);
+    mecanumMotion.CommitSpeed();
+}
+
+void RobotMoveZ(double speed)
+{
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddZSpeed(speed);
+    mecanumMotion.CommitSpeed();
+}
+
+void RobotStop()
+{
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.CommitSpeed();
+}

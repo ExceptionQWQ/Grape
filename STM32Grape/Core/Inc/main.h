@@ -35,6 +35,7 @@ extern "C" {
 #include "string.h"
 #include "stdio.h"
 #include "RobotMain.h"
+#include "robot.h"
 
 /* USER CODE END Includes */
 

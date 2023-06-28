@@ -1,6 +1,8 @@
 #MicroXplorer Configuration settings - do not modify
-FREERTOS.IPParameters=Tasks01
-FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL
+FREERTOS.FootprintOK=true
+FREERTOS.IPParameters=Tasks01,FootprintOK,Mutexes01
+FREERTOS.Mutexes01=debugUartMutex,Dynamic,NULL
+FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;robotMotion,24,1024,RobotMotion,Default,NULL,Dynamic,NULL,NULL
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
@@ -69,6 +71,7 @@ NVIC.TIM6_DAC_IRQn=true\:15\:0\:false\:false\:true\:false\:false\:true
 NVIC.TIM7_IRQn=true\:5\:0\:false\:false\:true\:true\:true\:true
 NVIC.TimeBase=TIM6_DAC_IRQn
 NVIC.TimeBaseIP=TIM6
+NVIC.USART1_IRQn=true\:5\:0\:false\:false\:true\:true\:true\:true
 NVIC.UsageFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
 PA1.Locked=true
 PA1.Signal=S_TIM2_CH2
@@ -159,7 +162,7 @@ ProjectManager.StackSize=0x400
 ProjectManager.TargetToolchain=STM32CubeIDE
 ProjectManager.ToolChainLocation=
 ProjectManager.UnderRoot=true
-ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false,3-MX_USART1_UART_Init-USART1-false-HAL-true,4-MX_TIM2_Init-TIM2-false-HAL-true,5-MX_TIM3_Init-TIM3-false-HAL-true,6-MX_TIM4_Init-TIM4-false-HAL-true,7-MX_TIM8_Init-TIM8-false-HAL-true,8-MX_TIM1_Init-TIM1-false-HAL-true
+ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false,3-MX_USART1_UART_Init-USART1-false-HAL-true,4-MX_TIM2_Init-TIM2-false-HAL-true,5-MX_TIM3_Init-TIM3-false-HAL-true,6-MX_TIM4_Init-TIM4-false-HAL-true,7-MX_TIM8_Init-TIM8-false-HAL-true,8-MX_TIM1_Init-TIM1-false-HAL-true,9-MX_TIM7_Init-TIM7-false-HAL-true
 RCC.48MHZClocksFreq_Value=84000000
 RCC.AHBFreq_Value=168000000
 RCC.APB1CLKDivider=RCC_HCLK_DIV4

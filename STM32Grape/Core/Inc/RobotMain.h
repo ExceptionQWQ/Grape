@@ -16,6 +16,11 @@ extern "C" {
     void RobotInit();
     void RobotTick();
     void RobotTest();
+    void RobotMoveX(double speed);
+    void RobotMoveY(double speed);
+    void RobotMoveZ(double speed);
+    void RobotStop();
+
 
 #ifdef __cplusplus
 }

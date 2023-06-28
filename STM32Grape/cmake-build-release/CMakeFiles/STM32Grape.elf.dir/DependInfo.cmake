@@ -12,9 +12,6 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
-  "ARM_MATH_CM4"
-  "ARM_MATH_MATRIX_CHECK"
-  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"
@@ -35,6 +32,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/freertos.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj"
+  "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/robot.c.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_hal_msp.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_hal_timebase_tim.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_it.c" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj"
@@ -74,9 +72,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "ARM_MATH_CM4"
-  "ARM_MATH_MATRIX_CHECK"
-  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"
@@ -103,9 +98,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "ARM_MATH_CM4"
-  "ARM_MATH_MATRIX_CHECK"
-  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"

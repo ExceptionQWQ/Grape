@@ -331,6 +331,33 @@ Core/Src/pid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.s
 .PHONY : Core/Src/pid.cpp.s
 
+Core/Src/robot.obj: Core/Src/robot.c.obj
+
+.PHONY : Core/Src/robot.obj
+
+# target to build an object file
+Core/Src/robot.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/robot.c.obj
+.PHONY : Core/Src/robot.c.obj
+
+Core/Src/robot.i: Core/Src/robot.c.i
+
+.PHONY : Core/Src/robot.i
+
+# target to preprocess a source file
+Core/Src/robot.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/robot.c.i
+.PHONY : Core/Src/robot.c.i
+
+Core/Src/robot.s: Core/Src/robot.c.s
+
+.PHONY : Core/Src/robot.s
+
+# target to generate assembly for a file
+Core/Src/robot.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/robot.c.s
+.PHONY : Core/Src/robot.c.s
+
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 
 .PHONY : Core/Src/stm32f4xx_hal_msp.obj
@@ -1288,6 +1315,9 @@ help:
 	@echo "... Core/Src/pid.obj"
 	@echo "... Core/Src/pid.i"
 	@echo "... Core/Src/pid.s"
+	@echo "... Core/Src/robot.obj"
+	@echo "... Core/Src/robot.i"
+	@echo "... Core/Src/robot.s"
 	@echo "... Core/Src/stm32f4xx_hal_msp.obj"
 	@echo "... Core/Src/stm32f4xx_hal_msp.i"
 	@echo "... Core/Src/stm32f4xx_hal_msp.s"

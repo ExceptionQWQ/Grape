@@ -37,6 +37,8 @@ stdio.h
 ../Core/Inc/stdio.h
 RobotMain.h
 ../Core/Inc/RobotMain.h
+robot.h
+../Core/Inc/robot.h
 
 ../Core/Inc/motion.h
 motor.h
@@ -55,6 +57,28 @@ utility
 ../Core/Inc/pid.h
 utility
 -
+
+../Core/Inc/robot.h
+main.h
+../Core/Inc/main.h
+usart.h
+../Core/Inc/usart.h
+stdio.h
+../Core/Inc/stdio.h
+string.h
+../Core/Inc/string.h
+FreeRTOS.h
+../Core/Inc/FreeRTOS.h
+task.h
+../Core/Inc/task.h
+cmsis_os.h
+../Core/Inc/cmsis_os.h
+semphr.h
+../Core/Inc/semphr.h
+math.h
+../Core/Inc/math.h
+message_buffer.h
+../Core/Inc/message_buffer.h
 
 ../Core/Inc/stm32f4xx_hal_conf.h
 stm32f4xx_hal_rcc.h
@@ -508,6 +532,10 @@ portmacro.h
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 
+../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h
+stream_buffer.h
+../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+
 ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -519,6 +547,16 @@ mpu_wrappers.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+task.h
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+
+../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+queue.h
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+
+../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 list.h
@@ -535,6 +573,10 @@ main.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.h
 cmsis_os.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/cmsis_os.h
+message_buffer.h
+/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/message_buffer.h
+robot.h
+/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.h
 
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.c
 gpio.h
@@ -551,6 +593,10 @@ usart.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/usart.h
 gpio.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.h
+
+/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.c
+robot.h
+/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.h
 
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_hal_msp.c
 main.h
