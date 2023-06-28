@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/pi/RaspiGrape/grape.cpp
+grape.h
+/home/pi/RaspiGrape/grape.h
+robot.h
+/home/pi/RaspiGrape/robot.h
+servo.h
+/home/pi/RaspiGrape/servo.h
+
 /home/pi/RaspiGrape/grape.h
 iostream
 -
@@ -34,9 +42,9 @@ wiringSerial.h
 opencv2/opencv.hpp
 -
 
-/home/pi/RaspiGrape/servo.cpp
-servo.h
-/home/pi/RaspiGrape/servo.h
+/home/pi/RaspiGrape/robot.h
+grape.h
+/home/pi/RaspiGrape/grape.h
 
 /home/pi/RaspiGrape/servo.h
 grape.h

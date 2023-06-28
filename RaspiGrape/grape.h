@@ -16,6 +16,9 @@
 #include <opencv2/opencv.hpp>
 
 
+#define PI 3.141592653589793
+
+
 /*
 
 /dev/ttyAMA0

@@ -90,11 +90,11 @@ void UartTransmit(uint8_t* data, int len)
     for (int i = 0; i < len; ++i) {
         serialPutchar(servoSerial, data[i]);
     }
+    usleep(10000);
 }
 
 void SetServoPos(enum SERVO_TAG servoTag, uint16_t pos, uint16_t speed)
 {
-
     if (servoTag == SERVO_TAG_ClawL || servoTag == SERVO_TAG_ClawR) {
         pos = SwapInt16(pos);
         speed = SwapInt16(speed);
@@ -106,7 +106,6 @@ void SetServoPos(enum SERVO_TAG servoTag, uint16_t pos, uint16_t speed)
     writeTempCmd[10] = speed & 0xff;
     writeTempCmd[11] = (speed >> 8) & 0xff;
     writeTempCmd[12] = CheckSum(2, 11, writeTempCmd);
-
     UartTransmit(writeTempCmd, 13);
 }
 
@@ -117,13 +116,13 @@ void GetServoPos(enum SERVO_TAG servoTag)
     cmd[7] = CheckSum(2, 6, cmd);
     uint8_t rx[8] = {0};
     UartTransmit(cmd, 8);
-    usleep(10000);
     return ;
 }
 
 void UpdateServoPos()
 {
-    
+    uint8_t writeTempCmd[] = {0xff, 0xff, 0xfe, 0x02, 0x05, 0xfa};
+    UartTransmit(writeTempCmd, 6);
 }
 
 void* ServoThread(void*)

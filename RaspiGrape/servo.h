@@ -10,12 +10,12 @@
 
 enum SERVO_TAG
 {
-    SERVO_TAG_YUNTAI = 1,
-    SERVO_TAG_L1 = 2,
-    SERVO_TAG_L2 = 3,
-    SERVO_TAG_L3 = 4,
-    SERVO_TAG_ClawL = 5,
-    SERVO_TAG_ClawR = 6,
+    SERVO_TAG_YUNTAI = 1, //0-2450, 90-1450
+    SERVO_TAG_L1 = 2, //0-3050, 90-2050
+    SERVO_TAG_L2 = 3, //0-2150, 90-3150
+    SERVO_TAG_L3 = 4, //0-1950, 90-2950
+    SERVO_TAG_ClawL = 5, //0-, 90-
+    SERVO_TAG_ClawR = 6, //0-, 90-
 };
 
 
