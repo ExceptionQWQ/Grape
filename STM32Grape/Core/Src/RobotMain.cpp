@@ -126,6 +126,11 @@ void RobotTest()
     mecanumMotion.Move(30, -36000, -14000);
 }
 
+void RobotMove(double speed, double xDis, double yDis)
+{
+    mecanumMotion.Move(speed, xDis, yDis);
+}
+
 void RobotMoveX(double speed)
 {
     mecanumMotion.ClearSpeed();

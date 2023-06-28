@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/grape.dir/grape.cpp.o"
   "CMakeFiles/grape.dir/robot.cpp.o"
+  "CMakeFiles/grape.dir/servo.cpp.o"
   "grape"
   "grape.pdb"
 )

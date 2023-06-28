@@ -19,6 +19,7 @@ void Robot_Start();
 
 
 void Robot_Test();
+void Robot_Move(double speed, double xDis, double yDis);
 void Robot_MoveX(double speed);
 void Robot_MoveY(double speed);
 void Robot_MoveZ(double speed);

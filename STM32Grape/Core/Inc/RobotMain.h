@@ -16,6 +16,7 @@ extern "C" {
     void RobotInit();
     void RobotTick();
     void RobotTest();
+    void RobotMove(double speed, double xDis, double yDis);
     void RobotMoveX(double speed);
     void RobotMoveY(double speed);
     void RobotMoveZ(double speed);

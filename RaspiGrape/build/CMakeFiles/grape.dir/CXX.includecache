@@ -34,11 +34,11 @@ wiringSerial.h
 opencv2/opencv.hpp
 -
 
-/home/pi/RaspiGrape/robot.cpp
-robot.h
-/home/pi/RaspiGrape/robot.h
+/home/pi/RaspiGrape/servo.cpp
+servo.h
+/home/pi/RaspiGrape/servo.h
 
-/home/pi/RaspiGrape/robot.h
+/home/pi/RaspiGrape/servo.h
 grape.h
 /home/pi/RaspiGrape/grape.h
 

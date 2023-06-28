@@ -196,6 +196,33 @@ robot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grape.dir/build.make CMakeFiles/grape.dir/robot.cpp.s
 .PHONY : robot.cpp.s
 
+servo.o: servo.cpp.o
+
+.PHONY : servo.o
+
+# target to build an object file
+servo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grape.dir/build.make CMakeFiles/grape.dir/servo.cpp.o
+.PHONY : servo.cpp.o
+
+servo.i: servo.cpp.i
+
+.PHONY : servo.i
+
+# target to preprocess a source file
+servo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grape.dir/build.make CMakeFiles/grape.dir/servo.cpp.i
+.PHONY : servo.cpp.i
+
+servo.s: servo.cpp.s
+
+.PHONY : servo.s
+
+# target to generate assembly for a file
+servo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grape.dir/build.make CMakeFiles/grape.dir/servo.cpp.s
+.PHONY : servo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +238,9 @@ help:
 	@echo "... robot.o"
 	@echo "... robot.i"
 	@echo "... robot.s"
+	@echo "... servo.o"
+	@echo "... servo.i"
+	@echo "... servo.s"
 .PHONY : help
 
 

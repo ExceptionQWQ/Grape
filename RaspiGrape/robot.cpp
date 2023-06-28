@@ -8,6 +8,9 @@ char robotRecvBuff[1024] = {0};
 int robotRecvOffset = 0;
 
 
+volatile bool motionOK = false;
+
+
 bool startsWith(const char* str1, const char* str2)
 {
     int len1 = strlen(str1), len2 = strlen(str2);
@@ -23,6 +26,10 @@ void Handle_Robot_Message(char* message, int len)
     message[len] = 0;
 
     // std::cout << message << std::endl;
+
+    if (startsWith(message, "[Motion]OK")) {
+        motionOK = true;
+    }
 
 }
 
@@ -62,6 +69,16 @@ void Robot_Start()
 void Robot_Test()
 {
     serialPuts(robotSerial, "Hello WOrld\n");
+}
+
+void Robot_Move(double speed, double xDis, double yDis)
+{
+    motionOK = false;
+    char command[128] = {};
+    snprintf(command, 128, "[Move]speed=%.2f xDis=%.2f yDis=%.2f\n", speed, xDis, yDis);
+    std::cout << command << std::endl;
+    serialPuts(robotSerial, command);
+    while (!motionOK) { }
 }
 
 void Robot_MoveX(double speed)

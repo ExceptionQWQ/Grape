@@ -200,6 +200,17 @@ void RobotMotion(void *argument)
             RobotMoveZ(speed);
         } else if (startsWith(message, "[Stop]")) {
             RobotStop();
+        } else if (startsWith(message, "[Move]")) {
+            double speed, xDis, yDis;
+            sscanf(message, "[Move]speed=%lf xDis=%lf yDis=%lf", &speed, &xDis, &yDis);
+            RobotMove(speed, xDis, yDis);
+            //移动结束发送OK
+            portENTER_CRITICAL();
+            char msgOK[] = "[Motion]OK\r\n";
+            xSemaphoreTake(debugUartMutexHandle, portMAX_DELAY); //获取串口调试资源
+            HAL_UART_Transmit(&huart1, msgOK, strlen(msgOK), 100);
+            xSemaphoreGive(debugUartMutexHandle); //释放串口调试资源
+            portEXIT_CRITICAL();
         }
 
         osDelay(1);

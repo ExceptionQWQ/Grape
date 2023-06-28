@@ -24,10 +24,6 @@ tim.h
 usart.h
 ../Core/Inc/usart.h
 
-../Core/Inc/gpio.h
-main.h
-../Core/Inc/main.h
-
 ../Core/Inc/main.h
 stm32f4xx_hal.h
 ../Core/Inc/stm32f4xx_hal.h
@@ -179,8 +175,6 @@ stm32f4xx_hal_lptim.h
 ../Core/Inc/stm32f4xx_hal_lptim.h
 stm32f4xx_hal_mmc.h
 ../Core/Inc/stm32f4xx_hal_mmc.h
-
-../Core/Inc/stm32f4xx_it.h
 
 ../Core/Inc/tim.h
 main.h
@@ -577,42 +571,4 @@ message_buffer.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/message_buffer.h
 robot.h
 /Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.c
-gpio.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.c
-main.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.h
-cmsis_os.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/cmsis_os.h
-tim.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/tim.h
-usart.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/usart.h
-gpio.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/gpio.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.c
-robot.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/robot.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_hal_msp.c
-main.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_it.c
-main.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.h
-stm32f4xx_it.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/stm32f4xx_it.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/tim.c
-tim.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/tim.h
-
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/usart.c
-usart.h
-/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/usart.h
 
