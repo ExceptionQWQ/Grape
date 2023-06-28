@@ -3,7 +3,6 @@
 
 #include "pid.h"
 
-
 #ifdef __cplusplus
 
 #include <utility>
@@ -29,7 +28,7 @@ namespace RDK
         void SetSpeed(double speed);
         void SetCallback(MotorCallback motorCallback);
         int AddPulse(int pulse);
-        int GetPulse();
+        int GetPulse() volatile;
         int ClearPulse();
         void Tick();
     };

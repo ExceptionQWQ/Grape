@@ -35,7 +35,7 @@ namespace RDK
         double output = this->kp * this->error +
                         this->ki * this->totalError +
                         this->kd * (this->error - this->lastError);
-        this->output += output;
+        this->output = output;
         this->output = CheckRange(this->output, GetOutputRange());
     }
 

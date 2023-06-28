@@ -122,18 +122,6 @@ void RobotTick()
 
 void RobotTest()
 {
-    mecanumMotion.ClearSpeed();
-    mecanumMotion.AddXSpeed(30);
-    mecanumMotion.CommitSpeed();
-    HAL_Delay(2000);
-    mecanumMotion.ClearSpeed();
-    mecanumMotion.AddYSpeed(30);
-    mecanumMotion.CommitSpeed();
-    HAL_Delay(2000);
-    mecanumMotion.ClearSpeed();
-    mecanumMotion.AddZSpeed(30);
-    mecanumMotion.CommitSpeed();
-    HAL_Delay(2000);
-    mecanumMotion.ClearSpeed();
-    mecanumMotion.CommitSpeed();
+    mecanumMotion.Move(30, 36000, 14000);
+    mecanumMotion.Move(30, -36000, -14000);
 }

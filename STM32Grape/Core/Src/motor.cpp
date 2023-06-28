@@ -81,13 +81,14 @@ namespace RDK
     int EncodingMotor::AddPulse(int pulse)
     {
         pid.SetInput(pulse);
+        if (reverse) pulse = -pulse;
         return this->pulse += pulse;
     }
 
 /*
  * @brief 获取电机的脉冲数
  */
-    int EncodingMotor::GetPulse()
+    int EncodingMotor::GetPulse() volatile
     {
         return this->pulse;
     }
