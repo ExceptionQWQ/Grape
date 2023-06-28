@@ -5,7 +5,7 @@ RDK::EncodingMotor encodingMotor1;
 RDK::EncodingMotor encodingMotor2;
 RDK::EncodingMotor encodingMotor3;
 RDK::EncodingMotor encodingMotor4;
-
+RDK::MecanumMotion mecanumMotion;
 
 
 void Motor1Callback(double pwm)
@@ -68,23 +68,30 @@ void RobotInit()
 {
     encodingMotor1.SetPID(4, 0.4, 0);
     encodingMotor1.SetOutputRange(-1000, 1000);
-    encodingMotor1.SetSpeed(10);
+    encodingMotor1.SetSpeed(0);
     encodingMotor1.SetCallback(Motor1Callback);
+    encodingMotor1.SetReverse(true);
 
     encodingMotor2.SetPID(4, 0.4, 0);
     encodingMotor2.SetOutputRange(-1000, 1000);
-    encodingMotor2.SetSpeed(10);
+    encodingMotor2.SetSpeed(0);
     encodingMotor2.SetCallback(Motor2Callback);
 
     encodingMotor3.SetPID(4, 0.4, 0);
     encodingMotor3.SetOutputRange(-1000, 1000);
-    encodingMotor3.SetSpeed(10);
+    encodingMotor3.SetSpeed(0);
     encodingMotor3.SetCallback(Motor3Callback);
+    encodingMotor3.SetReverse(true);
 
     encodingMotor4.SetPID(4, 0.4, 0);
     encodingMotor4.SetOutputRange(-1000, 1000);
-    encodingMotor4.SetSpeed(10);
+    encodingMotor4.SetSpeed(0);
     encodingMotor4.SetCallback(Motor4Callback);
+
+    mecanumMotion.SetEncodingMotor1(&encodingMotor1);
+    mecanumMotion.SetEncodingMotor2(&encodingMotor2);
+    mecanumMotion.SetEncodingMotor3(&encodingMotor3);
+    mecanumMotion.SetEncodingMotor4(&encodingMotor4);
 }
 
 void RobotTick()
@@ -115,9 +122,18 @@ void RobotTick()
 
 void RobotTest()
 {
-    char message[64] = {0};
-    short speed = (short) __HAL_TIM_GET_COUNTER(&htim2);
-    snprintf(message, 64, "speed:%d\r\n", speed);
-    HAL_UART_Transmit(&huart1, (uint8_t*)message, strlen(message), 100);
-
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddXSpeed(30);
+    mecanumMotion.CommitSpeed();
+    HAL_Delay(2000);
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddYSpeed(30);
+    mecanumMotion.CommitSpeed();
+    HAL_Delay(2000);
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.AddZSpeed(30);
+    mecanumMotion.CommitSpeed();
+    HAL_Delay(2000);
+    mecanumMotion.ClearSpeed();
+    mecanumMotion.CommitSpeed();
 }

@@ -6,6 +6,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Startup/startup_stm32f407zgtx.s.obj: ../Core/
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/FreeRTOSConfig.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -56,6 +57,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj: ../Core/Src/freertos.c
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/gpio.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -97,6 +99,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/FreeRTOSConfig.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/gpio.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -146,6 +149,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj: ../Core/Src/main.c
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -218,6 +222,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj: ../Core
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -295,6 +300,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/system_stm32f4xx.c.obj: ../Core/Src/syste
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -334,6 +340,7 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/tim.c.obj: ../Core/Src/tim.c
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/usart.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -1032,6 +1039,7 @@ CMakeFiles/STM32Grape.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.o
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/RobotMain.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/main.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/motion.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/pid.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -1068,6 +1076,11 @@ CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Drivers/STM32F4xx_H
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj: ../Core/Src/RobotMain.cpp
+
+CMakeFiles/STM32Grape.elf.dir/Core/Src/motion.cpp.obj: ../Core/Inc/motion.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/motion.cpp.obj: ../Core/Inc/motor.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/motion.cpp.obj: ../Core/Inc/pid.h
+CMakeFiles/STM32Grape.elf.dir/Core/Src/motion.cpp.obj: ../Core/Src/motion.cpp
 
 CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.obj: ../Core/Inc/motor.h
 CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.obj: ../Core/Inc/pid.h

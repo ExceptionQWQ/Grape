@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/freertos.c.obj"
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/gpio.c.obj"
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.obj"
+  "CMakeFiles/STM32Grape.elf.dir/Core/Src/motion.cpp.obj"
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.obj"
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.obj"
   "CMakeFiles/STM32Grape.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
