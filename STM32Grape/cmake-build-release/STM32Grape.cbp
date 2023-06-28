@@ -44,6 +44,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
@@ -76,6 +79,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
@@ -117,6 +123,9 @@
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/main.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/motor.h">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Inc/pid.h">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
@@ -142,6 +151,9 @@
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/main.c">
+			<Option target="STM32Grape.elf"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/motor.cpp">
 			<Option target="STM32Grape.elf"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/pid.cpp">

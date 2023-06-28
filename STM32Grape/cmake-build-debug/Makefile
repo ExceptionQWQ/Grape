@@ -250,6 +250,33 @@ Core/Src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
 
+Core/Src/motor.obj: Core/Src/motor.cpp.obj
+
+.PHONY : Core/Src/motor.obj
+
+# target to build an object file
+Core/Src/motor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.obj
+.PHONY : Core/Src/motor.cpp.obj
+
+Core/Src/motor.i: Core/Src/motor.cpp.i
+
+.PHONY : Core/Src/motor.i
+
+# target to preprocess a source file
+Core/Src/motor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.i
+.PHONY : Core/Src/motor.cpp.i
+
+Core/Src/motor.s: Core/Src/motor.cpp.s
+
+.PHONY : Core/Src/motor.s
+
+# target to generate assembly for a file
+Core/Src/motor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32Grape.elf.dir/build.make CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.s
+.PHONY : Core/Src/motor.cpp.s
+
 Core/Src/pid.obj: Core/Src/pid.cpp.obj
 
 .PHONY : Core/Src/pid.obj
@@ -1225,6 +1252,9 @@ help:
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"
+	@echo "... Core/Src/motor.obj"
+	@echo "... Core/Src/motor.i"
+	@echo "... Core/Src/motor.s"
 	@echo "... Core/Src/pid.obj"
 	@echo "... Core/Src/pid.i"
 	@echo "... Core/Src/pid.s"

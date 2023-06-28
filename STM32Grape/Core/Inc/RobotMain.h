@@ -4,6 +4,7 @@
 
 #include "main.h"
 #include "pid.h"
+#include "motor.h"
 #include "tim.h"
 #include "usart.h"
 

@@ -12,6 +12,9 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
+  "ARM_MATH_CM4"
+  "ARM_MATH_MATRIX_CHECK"
+  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"
@@ -71,6 +74,9 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
+  "ARM_MATH_CM4"
+  "ARM_MATH_MATRIX_CHECK"
+  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"
@@ -89,12 +95,16 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/RobotMain.cpp" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/RobotMain.cpp.obj"
+  "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/motor.cpp" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/motor.cpp.obj"
   "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/Core/Src/pid.cpp" "/Users/mac/Desktop/Grape-WS/Grape/STM32Grape/cmake-build-release/CMakeFiles/STM32Grape.elf.dir/Core/Src/pid.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ARM_MATH_CM4"
+  "ARM_MATH_MATRIX_CHECK"
+  "ARM_MATH_ROUNDING"
   "DEBUG"
   "STM32F407xx"
   "USE_HAL_DRIVER"
