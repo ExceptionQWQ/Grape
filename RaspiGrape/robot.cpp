@@ -1,15 +1,12 @@
 #include "robot.h"
 
 
-struct RobotInfo robotInfo;
 
 int robotSerial;
 pthread_t robotThreadHandle;
 char robotRecvBuff[1024] = {0};
 int robotRecvOffset = 0;
 
-volatile bool motionHello = false;
-volatile bool motionOK = false;
 
 bool startsWith(const char* str1, const char* str2)
 {
@@ -25,21 +22,13 @@ void Handle_Robot_Message(char* message, int len)
 {
     message[len] = 0;
 
-    const char* format = nullptr;
-    if (startsWith(message, "[imu]")) {
-        format = "[imu]heading:%lf pitch:%lf roll:%lf";
-        sscanf(message, format, &robotInfo.heading, &robotInfo.pitch, &robotInfo.roll);
-    } else if (startsWith(message, "[motion]OK")) {
-        motionOK = true;
-    } else if (startsWith(message, "[motion]Hello")) {
-        motionHello = true;
-    }
+    // std::cout << message << std::endl;
+
 }
 
 void Robot_Init()
 {
-    robotInfo.xPos = 0;
-    robotInfo.yPos = 0;
+    
 }
 
 
@@ -69,93 +58,37 @@ void Robot_Start()
     pthread_create(&robotThreadHandle, nullptr, RobotThread, nullptr);
 }
 
-/*
- * @brief 机器人向前移动一段距离
- * @param speed 移动速度
- * @param dis 移动距离(mm)
- */
-bool Robot_MoveForward(double speed, double dis)
+
+void Robot_Test()
 {
-    dis *= ROBOT_MM_TO_PULSE;
-    motionHello = false;
-    motionOK = false;
-    char message[128] = {0};
-    snprintf(message, 128, "[forward]speed=%.4lf dis=%.4lf\n", speed, dis);
-    std::cout << message << std::endl;
-    serialPuts(robotSerial, message);
-
-    int cnt = 0;
-    while (!motionHello) {
-        usleep(1000);
-        if (++cnt > 1000) break;
-    }
-    if (cnt > 1000) return false;
-
-    cnt = 0;
-    while (!motionOK) {
-        usleep(1000);
-        if (++cnt > 3000) break;
-    }
-    return true;
+    serialPuts(robotSerial, "Hello WOrld\n");
 }
 
-/*
- * @brief 机器人向后移动一段距离
- * @param speed 移动速度
- * @param dis 移动距离(mm)
- */
-bool Robot_MoveBackward(double speed, double dis)
+void Robot_MoveX(double speed)
 {
-    dis *= ROBOT_MM_TO_PULSE;
-    motionHello = false;
-    motionOK = false;
-    char message[128] = {0};
-    snprintf(message, 128, "[backward]speed=%.4lf dis=%.4lf\n", speed, dis);
-    std::cout << message << std::endl;
-    serialPuts(robotSerial, message);
-    
-
-    int cnt = 0;
-    while (!motionHello) {
-        usleep(1000);
-        if (++cnt > 1000) break;
-    }
-    if (cnt > 1000) return false;
-
-    cnt = 0;
-    while (!motionOK) {
-        usleep(1000);
-        if (++cnt > 3000) break;
-    }
-    return true;
+    char command[128] = {};
+    snprintf(command, 128, "[MoveX]speed=%.2f\n", speed);
+    std::cout << command << std::endl;
+    serialPuts(robotSerial, command);
 }
 
-/*
- * @brief 机器人转弯
- * @param speed 移动速度
- * @param radian 要转到的弧度
- */
-bool Robot_SpinTo(double speed, double radian)
+void Robot_MoveY(double speed)
 {
-    motionHello = false;
-    motionOK = false;
-    char message[128] = {0};
-    snprintf(message, 128, "[spin]speed=%.4lf radian=%.4lf\n", speed, radian);
-    std::cout << message << std::endl;
-    serialPuts(robotSerial, message);
-    
-    int cnt = 0;
-    while (!motionHello) {
-        usleep(1000);
-        if (++cnt > 1000) break;
-    }
-    if (cnt > 1000) return false;
-
-    cnt = 0;
-    while (!motionOK) {
-        usleep(1000);
-        if (++cnt > 3000) break;
-    }
-    return true;
+    char command[128] = {};
+    snprintf(command, 128, "[MoveY]speed=%.2f\n", speed);
+    std::cout << command << std::endl;
+    serialPuts(robotSerial, command);
 }
 
+void Robot_MoveZ(double speed)
+{
+    char command[128] = {};
+    snprintf(command, 128, "[MoveZ]speed=%.2f\n", speed);
+    std::cout << command << std::endl;
+    serialPuts(robotSerial, command);
+}
+
+void Robot_Stop()
+{
+    serialPuts(robotSerial, "[Stop]\n");
+}
